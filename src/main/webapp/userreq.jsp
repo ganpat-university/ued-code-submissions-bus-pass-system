@@ -7,7 +7,7 @@ pageEncoding="ISO-8859-1"%>
 <!Doctype HTML>
 	<html>
 	<head>
-		<title></title>
+		<title>User Request</title>
 		<link rel="stylesheet" href="admindash.css" type="text/css"/>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
@@ -52,23 +52,31 @@ pageEncoding="ISO-8859-1"%>
         user="root" password="97250" />
      
     <sql:query var="listUsers"   dataSource="${myDS}">
-        SELECT * FROM logdata;
+        SELECT * FROM pass_details;
     </sql:query>
      
     <div align="center">
         <table border="1" cellpadding="5">
             <tr>
-                <th>ID</th>
+                <th>Passid</th>
                 <th>Name</th>
                 <th>Email</th>
-                <th>Phoneno</th>
+                <th>Occupation</th>
+                <th>PassType</th>
+                <th>User_id</th>
+                <th>Request</th>
+                <th>Request</th>
             </tr>
             <c:forEach var="user" items="${listUsers.rows}">
                 <tr>
-                    <td><c:out value="${user.user_id}" /></td>
-                    <td><c:out value="${user.username}" /></td>
+                    <td><c:out value="${user.Pass_id}" /></td>
+                    <td><c:out value="${user.fullname}" /></td>
                     <td><c:out value="${user.email}" /></td>
-                    <td><c:out value="${user.phoneno}" /></td>
+                    <td><c:out value="${user.occupation}" /></td>
+                    <td><c:out value="${user.passtype}" /></td>
+                    <td><c:out value="${user.user_id}" /></td>
+                    <td><input type="submit" value="Accept" name="Accept"/></td>
+                    <td><input type="submit" value="Decline" name="Decline"/></td>
                 </tr>
             </c:forEach>
         </table>
