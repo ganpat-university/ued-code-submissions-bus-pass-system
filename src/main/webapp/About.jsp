@@ -5,12 +5,12 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Bus Pass System">
+    <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="page_type" content="np-template-header-footer-from-plugin">
-    <title>Home</title>
+    <title>About</title>
     <link rel="stylesheet" href="nicepage.css" media="screen">
-<link rel="stylesheet" href="Home.css" media="screen">
+<link rel="stylesheet" href="About.css" media="screen">
     <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
     <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
     <meta name="generator" content="Nicepage 4.8.2, nicepage.com">
@@ -23,7 +23,7 @@
 		"logo": "images/buslogo.jpg"
 }</script>
     <meta name="theme-color" content="#478ac9">
-    <meta property="og:title" content="Home">
+    <meta property="og:title" content="About">
     <meta property="og:type" content="website">
   </head>
   <body class="u-body u-xl-mode"><header class="u-clearfix u-header u-header" id="sec-0035"><div class="u-clearfix u-sheet u-sheet-1">
@@ -60,14 +60,6 @@
           </div>
         </nav>
       </div></header> 
-    <section class="u-align-center u-clearfix u-image u-shading u-section-1" src="" data-image-width="256" data-image-height="256" id="sec-0f31">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <h1 class="u-text u-text-default u-title u-text-1">Bus Pass System</h1>
-        <p class="u-large-text u-text u-text-default u-text-variant u-text-2">Here You can Get Your New Pass</p>
-        <a href="newpass.jsp" class="u-btn u-button-style u-palette-2-base u-btn-1">New Pass</a>
-        <a href="renewpass.jsp" class="u-btn u-button-style u-palette-2-base u-btn-2">Renew Pass</a>
-      </div>
-    </section>
     
     
     <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-f74b"><div class="u-clearfix u-sheet u-sheet-1">
@@ -80,7 +72,7 @@
         </a>
       </div></footer>
     <section class="u-backlink u-clearfix u-grey-80">
- 
+  
     </section>
   </body>
 </html>

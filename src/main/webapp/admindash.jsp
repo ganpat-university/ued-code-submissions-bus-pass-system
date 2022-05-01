@@ -18,7 +18,7 @@
 	  <a href="userdisp.jsp"class="icon-a"><i class="fa fa-users icons"></i>   Users</a>
 	  <a href="userreq.jsp"class="icon-a"><i class="fa fa-list icons"></i>   Users requests</a>
 	  <a href="#"class="icon-a"><i class="fa fa-tasks icons"></i>   Edit Roots</a>
-	  <a href="Admin.html"class="icon-a"><i class="fa fa-user icons"></i>   Logout</a>
+	  <a href="Admin.jsp"class="icon-a"><i class="fa fa-user icons"></i>   Logout</a>
 
 	</div>
 	<div id="main">
@@ -67,7 +67,25 @@ catch (Exception e){
 		</div>
 		<div class="col-div-3">
 			<div class="box">
-				<p>00<br/><span>User requests</span></p>
+				<p><%
+try
+{
+    Class.forName("com.mysql.jdbc.Driver").newInstance();
+    Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/project","root","97250");     
+    Statement st=con.createStatement();
+    String strQuery = "SELECT COUNT(*) FROM pass_details";
+    ResultSet rs = st.executeQuery(strQuery);
+
+    String Countrow="";
+      while(rs.next()){
+      Countrow = rs.getString(1);
+      out.println(Countrow);
+       } 
+    }
+catch (Exception e){
+    e.printStackTrace();
+  }
+  %><br/><span>User requests</span></p>
 				<i class="fa fa-list box-icon"></i>
 			</div>
 		</div>
