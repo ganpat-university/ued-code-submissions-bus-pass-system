@@ -4,7 +4,7 @@
 <!Doctype HTML>
 	<html>
 	<head>
-		<title></title>
+		<title>AdminDashboard</title>
 		<link rel="stylesheet" href="admindash.css" type="text/css"/>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
@@ -18,7 +18,7 @@
 	  <a href="userdisp.jsp"class="icon-a"><i class="fa fa-users icons"></i>   Users</a>
 	  <a href="userreq.jsp"class="icon-a"><i class="fa fa-list icons"></i>   Users requests</a>
 	  <a href="#"class="icon-a"><i class="fa fa-tasks icons"></i>   Edit Roots</a>
-	  <a href="Admin.jsp"class="icon-a"><i class="fa fa-user icons"></i>   Logout</a>
+	  <a href="Home.jsp"class="icon-a"><i class="fa fa-user icons"></i>   Logout</a>
 
 	</div>
 	<div id="main">
