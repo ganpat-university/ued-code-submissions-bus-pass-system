@@ -6,20 +6,24 @@ Pre-requisites:-
   3.	MySQL
 
 Database:
+
   -> Admin Data:
+  
       Field	     Type	         Null	  Key
       username	 varchar(20)	 YES	
       password	 varchar(20)	 YES	
       
   -> User Data:
-      Field	        Type	        Null	 Key
-      user_id	      int	          NO	   PRIMARY
-      username	    varchar(20)	  YES	
-      email	        varchar(300)	YES	
-      phoneno	      varchar(20)	  YES	
-      passwordData	varchar(20) 	YES	
+  
+      Field           Type	          Null	   Key
+      user_id	        int	            NO	     PRIMARY
+      username	      varchar(20)	    YES	
+      email	          varchar(300)	  YES	
+      phoneno	        varchar(20)	    YES	
+      passwordData	  varchar(20) 	  YES	
   
   -> Pass Data:
+  
       Field	      Type	        Null	 Key
       pass_id	    int	          NO	   PRIMARY
       fullname	  varchar(45)	  YES	
