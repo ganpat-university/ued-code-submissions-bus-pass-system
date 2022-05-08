@@ -21,7 +21,7 @@ pageEncoding="ISO-8859-1"%>
 	  <a href="userdisp.jsp"class="icon-a"><i class="fa fa-users icons"></i>   Users</a>
 	  <a href="userreq.jsp"class="icon-a"><i class="fa fa-list icons"></i>   Users requests</a>
 	  <a href="#"class="icon-a"><i class="fa fa-tasks icons"></i>   Edit Roots</a>
-	  <a href="Admin.html"class="icon-a"><i class="fa fa-user icons"></i>   Logout</a>
+	  <a href="Home.jsp"class="icon-a"><i class="fa fa-user icons"></i>   Logout</a>
 
 	</div>
 	<div id="main">
@@ -52,9 +52,10 @@ pageEncoding="ISO-8859-1"%>
         user="root" password="97250" />
      
     <sql:query var="listUsers"   dataSource="${myDS}">
-        SELECT * FROM pass_details;
+        SELECT * FROM pass_details where status="Pending";
     </sql:query>
      
+   
     <div align="center">
         <table border="1" cellpadding="5">
             <tr>
@@ -64,8 +65,8 @@ pageEncoding="ISO-8859-1"%>
                 <th>Occupation</th>
                 <th>PassType</th>
                 <th>User_id</th>
-                <th>Request</th>
-                <th>Request</th>
+                <th>Approve</th>
+                <th>Reject</th>
             </tr>
             <c:forEach var="user" items="${listUsers.rows}">
                 <tr>
@@ -74,9 +75,19 @@ pageEncoding="ISO-8859-1"%>
                     <td><c:out value="${user.email}" /></td>
                     <td><c:out value="${user.occupation}" /></td>
                     <td><c:out value="${user.passtype}" /></td>
-                    <td><c:out value="${user.user_id}" /></td>
-                    <td><input type="submit" value="Accept" name="Accept"/></td>
-                    <td><input type="submit" value="Decline" name="Decline"/></td>
+                    <td><c:out value="${user.user_id}" /></td>    
+                    <td>
+                    	<form action="approve" method="get">
+                    		<input type="hidden" name="userid" value="${user.user_id}"/>
+                    		<input type="submit" name="Approve" value="Approve">
+                    	</form>
+                    </td>    
+                    <td>
+                    	<form action="reject" method="get">
+                    		<input type="hidden" name="userid" value="${user.user_id}">
+                    		<input type="submit" name="Reject" value="Reject">
+                    	</form>
+                    </td>       
                 </tr>
             </c:forEach>
         </table>
